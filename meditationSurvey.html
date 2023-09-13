@@ -4,44 +4,97 @@
     <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <meta charset= "UTF-8">
     <title>Meditation Survey</title>
+    <link rel="stylesheet" href="styles.css"
   </head>
   <body>
+    <h1 id="title">* Meditation Survey *</h1>
+    <p id="description"> Thank you for participating in meditation retreat! Please answer the following questions so we can improve our program </p>
     <form id="survey-form">
-    <fieldset>
-      <div>
-        <label id="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Your Name" required></label>
-      </div>
-      <div>
-        <label id="email-label" for="email">Email <input id="email" name="email" type="email" placeholder="Your email address" required></label>
-      </div>
-      <div>
-        <label id="number-label" for="age">Age(optional) <input id="number" name="age" type="number" min="8" max="140" placeholder="Age"> </label>
-      </div>
-    </fieldset>
-    <fieldset>
-      <div>
-        <label id="spiritual-background" for="religion">What religious/spiritual community do you associate best with?
-          <select id="dropdown" name="religion">
-            <option value="christianity">Christianity</option>
-            <option value="hinduism">Hinduism</option>
-            <option value="sikhism">Sikhism</option>
-            <option value="bhuddism">Bhuddism</option>
-            <option value="judaism">Judaism</option>
-            <option value="islam">Islam</option>
-            <option value="new-age-spirituality">New Age Spirituality</option>
-            <option value="other">Other</option>
-            <option value="agnostic/atheist">Agnostic/Atheist</option>
-          </select>
+      <fieldset>
+        <div>
+          <label id="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Your Name" required></label>
+        </div>
+        <div>
+          <label id="email-label" for="email">Email <input id="email" name="email" type="email" placeholder="Your email address" required></label>
+        </div>
+        <div>
+          <label id="number-label" for="age">Age(optional) <input id="number" name="age" type="number" min="8" max="140" placeholder="Age"> </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label id="spiritual-background" for="religion">What religious/spiritual community do you associate best with?
+            <select id="dropdown" name="religion">
+              <option value="christianity">Christianity</option>
+              <option value="hinduism">Hinduism</option>
+              <option value="sikhism">Sikhism</option>
+              <option value="bhuddism">Bhuddism</option>
+              <option value="judaism">Judaism</option>
+              <option value="islam">Islam</option>
+              <option value="new-age-spirituality">New Age Spirituality</option>
+              <option value="other">Other</option>
+              <option value="agnostic/atheist">Agnostic/Atheist</option>
+            </select>
+            <div>
+              <legend>Do you consider meditation to be a part of your relious/spiritual beliefs?</legend>
+              <div>
+                <label for="yes-part"><input id="yes-part" type="radio" name="part-of-religion" value="yes">Yes</label>
+              </div>
+              <div>
+                <label for="no-part"><input id="no-part" type="radio" name="part-of-religion" value="no">No</label>
+              </div>
+              <div>
+                <label for="dont-know-part"><input id="dont-know-part" type="radio" name="part-of-religion" value="unknown">Dont know</label>
+              </div>
+            </div>
+            <div>
+              <legend>Would you recommend our retreat to a friend?</legend>
+              <div>
+                <label for="yes-recommend"><input id="yes-recommend" type="radio" name="recommend" value="yes">Yes</label>
+              </div>
+              <div>
+                <label for="no-recommend"><input id="no-recommend" type="radio" name="recommend" value="no">No</label>
+              </div>
+              <div>
+                <label for="not-sure-recommend"><input id="not-sure-recommend" type="radio" name="recommend" value="unknown">Dont know</label>
+              </div>
+            </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <legend>Which activities did you participate in during retreat? Check all that apply.</legend>
           <div>
-            <legend>Do you consider meditation to be a part of your relious/spiritual beliefs?</legend>
-            <label for="yes-part"><input id="yes-part" type="radio" name="part-of-religion" value="yes">Yes</label>
-            <label for="no-part"><input id="no-part" type="radio" name="part-of-religion" value="no">No</label>
-            <label for="dont-know-part"><input id="dont-know-part" type="radio" name="part-of-religion" value="unknown">Dont know</label>
+            <label for="hatha"><input id="hatha" value="hatha" type="checkbox">Hatha Yoga</label>
           </div>
-    </fieldset>
-    <button type="submit" value="submit">
-          Submit
-    </button>
-  </form>
+          <div>
+            <label for="breath"><input id="breath" value="breath" type="checkbox">Breath Control Workshop</label>
+          </div>
+          <div>
+            <label for="silent"><input id="silent" value="silent" type="checkbox">Silent Meditation with Gabe</label>
+          </div>
+          <div>
+            <label for="musical"><input id="musical" value="musical" type="checkbox">Musical Healing Workshop</label>
+          </div><div>
+            <label for="journal"><input id="journal" value="journal" type="checkbox">Journaling</label>
+          </div>
+          <div>
+            <label for="q&a"><input id="q&a" value="q&a" type="checkbox">Q & A panel</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div>
+          <label for="liked-activity">What was your favorite activity and why?</label>
+          <textarea id="liked-activity" name="liked-activity" rows="6" cols="30"></textarea>
+        </div>
+        <div>
+          <label for="disliked-activity">What was your least favorite activity and how could we improve?</label>
+          <textarea id="disliked-activity" name="disliked-activity" rows="6" cols="30"></textarea>
+        </div>
+      </fieldset>
+      <div class="submit-button">
+        <button id= "submit" type="submit" value="submit">Submit</button>
+      </div>
+    </form>
   </body>
 </html>
