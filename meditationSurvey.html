@@ -6,6 +6,42 @@
     <title>Meditation Survey</title>
   </head>
   <body>
-  *  Meditation Survey *
+    <form id="survey-form">
+    <fieldset>
+      <div>
+        <label id="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Your Name" required></label>
+      </div>
+      <div>
+        <label id="email-label" for="email">Email <input id="email" name="email" type="email" placeholder="Your email address" required></label>
+      </div>
+      <div>
+        <label id="number-label" for="age">Age(optional) <input id="number" name="age" type="number" min="8" max="140" placeholder="Age"> </label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div>
+        <label id="spiritual-background" for="religion">What religious/spiritual community do you associate best with?
+          <select id="dropdown" name="religion">
+            <option value="christianity">Christianity</option>
+            <option value="hinduism">Hinduism</option>
+            <option value="sikhism">Sikhism</option>
+            <option value="bhuddism">Bhuddism</option>
+            <option value="judaism">Judaism</option>
+            <option value="islam">Islam</option>
+            <option value="new-age-spirituality">New Age Spirituality</option>
+            <option value="other">Other</option>
+            <option value="agnostic/atheist">Agnostic/Atheist</option>
+          </select>
+          <div>
+            <legend>Do you consider meditation to be a part of your relious/spiritual beliefs?</legend>
+            <label for="yes-part"><input id="yes-part" type="radio" name="part-of-religion" value="yes">Yes</label>
+            <label for="no-part"><input id="no-part" type="radio" name="part-of-religion" value="no">No</label>
+            <label for="dont-know-part"><input id="dont-know-part" type="radio" name="part-of-religion" value="unknown">Dont know</label>
+          </div>
+    </fieldset>
+    <button type="submit" value="submit">
+          Submit
+    </button>
+  </form>
   </body>
 </html>
